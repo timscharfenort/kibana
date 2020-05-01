@@ -63,7 +63,9 @@
     "mocha": "mocha",
     "mocha:debug": "mocha --debug-brk",
     "sterilize": "grunt sterilize",
-    "uiFramework:start": "grunt uiFramework:start"
+    "uiFramework:start": "grunt uiFramework:start",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -138,7 +140,7 @@
     "jade": "1.11.0",
     "jade-loader": "0.7.1",
     "joi": "6.6.1",
-    "jquery": "2.1.4",
+    "jquery": "3.5.0",
     "js-yaml": "3.4.1",
     "json-loader": "0.5.3",
     "json-stringify-safe": "5.0.1",
@@ -193,7 +195,8 @@
     "vision": "4.1.0",
     "webpack": "github:elastic/webpack#fix/query-params-for-aliased-loaders",
     "whatwg-fetch": "0.9.0",
-    "wreck": "6.2.0"
+    "wreck": "6.2.0",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "@elastic/eslint-config-kibana": "0.3.0",
@@ -266,5 +269,6 @@
   "engines": {
     "node": "6.9.5",
     "npm": "3.10.10"
-  }
+  },
+  "snyk": true
 }
